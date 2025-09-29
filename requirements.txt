@@ -1,0 +1,31 @@
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.51.3
+vllm>=0.7.3
+
+# Data processing
+pandas>=1.5.0
+numpy>=1.21.0
+Pillow>=9.0.0
+opencv-python>=4.7.0
+
+# Evaluation and metrics
+scipy>=1.9.0
+scikit-learn>=1.1.0
+matplotlib>=3.5.0
+
+# Web interface
+openai>=1.0.0
+requests>=2.28.0
+fastapi>=0.100.0
+uvicorn>=0.34.0
+
+# Utilities
+pydantic>=2.0.0
+tqdm>=4.64.0
+typing-extensions>=4.0.0
+playwright>=1.55.0
+
+# Qwen-VL specific
+qwen-vl-utils>=0.0.10

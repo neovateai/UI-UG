@@ -1,0 +1,2 @@
+export MODEL_PATH="/RL_final_model/ready_model"
+vllm serve $MODEL_PATH --port 8000 --served-model-name ui_ug --dtype bfloat16 --tensor-parallel-size 1 --max-model-len 8192 --mm_processor_kwargs '{"max_pixels":1003520}' --trust-remote-code
