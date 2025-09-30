@@ -5,10 +5,11 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Paper](https://img.shields.io/badge/paper-arxiv-red.svg)](https://arxiv.org/abs/2509.24361)
 [![Hugging Face Model](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow.svg)](https://huggingface.co/neovateai/UI-UG-7B)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github)](https://github.com/neovateai/UI-UG)
 
-[**🤗 Model**](https://huggingface.co/neovateai/UI-UG-7B) | [**🚀 Quick Start**](#-quick-start) | [**📊 Evaluation**](#-evaluation) | [**📄 License**](#-license) | 📖 Paper(Coming Soon)
+[**📖 Paper**](https://arxiv.org/abs/2509.24361) | [**🤗 Model**](https://huggingface.co/neovateai/UI-UG-7B) | [**🚀 Quick Start**](#-quick-start) | [**📊 Evaluation**](#-evaluation) | [**📄 License**](#-license)
 
 </div>
 
@@ -325,6 +326,22 @@ This project is licensed under the [Apache 2.0 License](https://www.apache.org/l
 - [**Qwen2.5-VL**](https://github.com/QwenLM/Qwen2.5-VL) - Multimodal foundation model
 - [**VLLM**](https://github.com/vllm-project/vllm) - High-performance inference framework
 - [**Ant Group**](https://www.antgroup.com) & [**AFX Team**](https://afx-team.github.io) - Technical support and scenario applications
+
+## 📖 Citation
+
+If you find this work useful, please consider citing:
+
+```bibtex
+@misc{yang2025uiugunifiedmllmui,
+      title={UI-UG: A Unified MLLM for UI Understanding and Generation}, 
+      author={Hao Yang and Weijie Qiu and Ru Zhang and Zhou Fang and Ruichao Mao and Xiaoyu Lin and Maji Huang and Zhaosong Huang and Teng Guo and Shuoyang Liu and Hai Rao},
+      year={2025},
+      eprint={2509.24361},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.24361}, 
+}
+```
 
 ---
 
