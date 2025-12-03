@@ -38,35 +38,20 @@ class GenerationEvaluator(BaseEvaluator):
         return {field: f"M{field}" for field in bind_fields}
     
     def evaluate_generation_results(self, predictions: List[str], file_idx: int) -> Dict[str, float]:
-        """Evaluate generation results based on JSON format and mock data."""
+        """Evaluate generation results based on JSON format."""
         sum_score_json_format = 0
-        sum_score_mock_data = 0
         total_samples = len(predictions)
         
         for pred in predictions:
             try:
-                if file_idx == 0:  # Multi-modal
-                    gen_json_data = json.loads(pred)
-                    sum_score_json_format += 1
-                    self.extract_bind_fields(gen_json_data)
-                    sum_score_mock_data += 1
-                else:  # Text-only
-                    tmp_res = pred.split('卡片的mock数据：')[-1]
-                    tmp_res = tmp_res.split('卡片的dsl：')
-                    model_mock = tmp_res[0].strip()
-                    model_dsl = tmp_res[-1].strip()
-                    
-                    gen_dsl_data = json.loads(model_dsl)
-                    gen_mock_data = json.loads(model_mock)
-                    sum_score_json_format += 1
-                    self.extract_bind_fields(gen_dsl_data)
-                    sum_score_mock_data += 1
+                gen_json_data = json.loads(pred)
+                sum_score_json_format += 1
+                self.extract_bind_fields(gen_json_data)
             except Exception as e:
                 print(f"Error processing prediction: {e}")
         
         return {
-            'score_json_format': sum_score_json_format / total_samples,
-            'score_mock_data': sum_score_mock_data / max(sum_score_json_format, 1),
+            'score_json_format': sum_score_json_format / total_samples
         }
     
     def run_evaluation(self, **kwargs) -> Dict[str, Any]:
